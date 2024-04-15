@@ -6,17 +6,16 @@ on:
       - main  # Set a branch to deploy
   pull_request:
 
-permissions:
-  contents: read
-  id-token: write
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
+      
       # configure gcloud `setup-gcloud` automatically
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
