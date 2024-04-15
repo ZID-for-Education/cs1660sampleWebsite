@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main  # Set a branch to deploy
-      - gha-service-account
   pull_request:
 
 permissions:
