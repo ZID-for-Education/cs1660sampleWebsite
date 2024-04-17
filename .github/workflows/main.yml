@@ -21,7 +21,7 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v2'
         with:
-          workload_identity_provider: 'projects/84099340212/locations/global/workloadIdentityPools/github/providers/1660hws'
+          workload_identity_provider: 'projects/84099340212/locations/global/workloadIdentityPools/github/providers/1660-repo'
           service_account: 'servattempt2@cs1660hws.iam.gserviceaccount.com'
 
       # upload files to GCS
